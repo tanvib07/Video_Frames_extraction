@@ -3,19 +3,21 @@ Extracting frames from a video
 
 CODE :
 
-import cv2
-vidcap = cv2.VideoCapture('VideoName.mp4')
-success, image = vidcap.read()
-count = 1600       #insert number of frames you want
-i = 0
-remaining_images = 50
-while True:
-    _, image = vidcap.read()
-    if i >= count:
-        cv2.imwrite("Frames/frame%d.jpg" % count, image)       # save frame as JPEG file
-        count += 4
-        print(i)
-        remaining_images -= 1
-    i += 1
-    if remaining_images <= 0:
-        break
+<br><br>
+
+import cv2<br>
+vidcap = cv2.VideoCapture('VideoName.mp4')<br>
+success, image = vidcap.read()<br>
+count = 1600       #insert number of frames you want<br>
+i = 0<br>
+remaining_images = 50<br>
+while True:<br>
+    _, image = vidcap.read()   <br>
+    if i >= count:   <br>
+        cv2.imwrite("Frames/frame%d.jpg" % count, image)       # save frame as JPEG file   <br>
+        count += 4 <br>
+        print(i)  <br>
+        remaining_images -= 1  <br>
+    i += 1  <br>
+    if remaining_images <= 0:  <br>
+        break  <br>
